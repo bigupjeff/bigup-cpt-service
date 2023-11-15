@@ -55,7 +55,6 @@ const MetaBox = ({
   metaFields,
   setMetaFields
 }) => {
-  console.log(metaFields);
   if (postType !== key) return null;
 
   // Dynamically build an object array of meta fields for output in the panel.
@@ -79,7 +78,6 @@ const MetaBox = ({
       'media': inputType === 'image-upload' ? (0,_wordpress_data__WEBPACK_IMPORTED_MODULE_3__.useSelect)(select => select("core").getMedia(value)) : false
     });
   });
-  console.log('metaFields', metaFields);
   return (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, fields.map(field => (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_edit_post__WEBPACK_IMPORTED_MODULE_4__.PluginDocumentSettingPanel, {
     key: field.metaKey,
     name: field.metaKey + '-panel',
